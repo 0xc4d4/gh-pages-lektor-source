@@ -1,0 +1,11 @@
+title: Projects
+---
+body:
+
+This is a list of the projects:
+
+* [my gh-pages][link-ref my github pages]
+* Project 2
+* Project 3
+
+[link-ref my github pages]: https://github.com/0xc4d4/0xc4d4.github.io

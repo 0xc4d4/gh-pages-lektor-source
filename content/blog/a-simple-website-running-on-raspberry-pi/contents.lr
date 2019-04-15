@@ -1,0 +1,75 @@
+title: A Simple Website running on Raspberry Pi!
+---
+author: 0xC4D4
+---
+body:
+
+So I have an old Raspberry Pi that's been sitting in a drawer for a couple of years.
+
+I want to try out some simple website, a static set of pages, but preferably with something that helps manage pages / partials and style, in a CMS kind of way. But without dynamic page generation, i want to deploy the site simple on the Pi, or any hosting provider without having to worry about database installs, CMS installs and all the updates and security patching that goes with it.
+
+###Setting up the Pi
+
+I downloaded RASPBIAN STRETCH LITE from [here][link-ref raspbian] (file: `2017-11-29-raspbian-stretch-lite.img` )
+
+Then I wrote to an SD-Card with dd command via [the Installation Guide][link-ref raspbian install] and following the [Mac "command line" instructions][link-ref raspbian mac terminal] on my old second hand 2011 macbook air
+
+When the Pi is booted, the image will re-size itself to use all of the free space on the SD Card (my card was 4GB), then  it will restart itself.
+
+You can log-in to the *Pi* with `user = pi` and `password = raspberry`
+
+###Getting a simple static web-site generator
+
+I had a look at [a couple of static website managers][link-ref static web managers], focusing on python which is supported on the Pi out of the box.
+
+I had a little trouble with them and didn't spend much time trying to resolve until I found Lektor which was the first one I saw that also boasted a CMS-like interface - very cool!
+
+First I got some of the python bits
+
+```bash
+sudo apt-get install python python-dev python-pip
+```
+Then I got a few more as the PIP install of Lektor was failing with a reference unfound : `c/_cffi_backend.c:15:17: fatal error: ffi.h: No such file or directory`
+
+```bash
+sudo apt-get install libssl-dev build-essential libffi-dev
+```
+
+I'd read somewhere that using __virtualenv__ in Python can be a good idea as it supports you to have various versions of packages installed on your system that don't interfere with each other, so now that we had installed the `python-pip` package manager I went and got it and
++ set up a folder for the project
++ created virtual env there & activated
++ grabbed lektor
++ set up a default lektor site
++ sudo pip install virtualenv
+
+```bash
+mkdir ~/dev-web
+mkdir ~/dev-web/lektor-0xc4d4
+cd    ~/dev-web/lektor-0xc4d4
+
+virtualenv .
+source bin/activate
+pip install --upgrade pip
+pip install lektor
+
+lektor quickstart
+```
+
+For the lektor install, I chose `> Add Basic Blog [Y/n]: y` and then was able to spin up the test/edit server for the CMS type interface and get editing right away !
+
+```bash
+cd <project name>
+lektor server -p 5000 -h <the Raspberry Pi's ip address :D>
+```
+And there you go, a python based, CMS interface supported website on Raspberry Pi, come back later when I have more info on [publishing the site with lektor][link-ref blog lektor publish] and [serving up the static output on your pi][link-ref blog pi static web server].
+
+[link-ref raspbian]: https://www.raspberrypi.org/downloads/raspbian/
+[link-ref raspbian install]: https://www.raspberrypi.org/documentation/installation/installing-images/README.md
+[link-ref raspbian mac terminal]: https://www.raspberrypi.org/documentation/installation/installing-images/mac.md
+[link-ref static web managers]: #todo-blog
+[link-ref blog lektor publish]: #todo-blog
+[link-ref blog pi static web server]: #todo-blog
+---
+pub_date: 2018-02-18
+---
+twitter_handle: 0xc4d4
