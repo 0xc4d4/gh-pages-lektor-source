@@ -69,8 +69,8 @@ And there you go, a python based, CMS interface supported website on Raspberry P
 [link-ref static web managers]: /blog/2018/2/static-web-managers/
 [link-ref python virtualenv]: https://github.com/thanethomson/statik/wiki/Installation
 [link-ref blog lektor publish]: /blog/2018/2/lektor-publish/
-[link-ref blog pi static web server]: /blog/2018/2/todo/
+[link-ref blog pi static web server]: /blog/2018/2/serving-a-static-website-on-a-raspberry-pi/
 ---
-pub_date: 2018-02-18
+pub_date: 2018-02-17
 ---
 twitter_handle: 0xc4d4

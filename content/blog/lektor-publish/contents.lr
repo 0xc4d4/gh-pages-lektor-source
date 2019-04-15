@@ -1,16 +1,21 @@
-title: Lektor Publish
+title: Publish Static Website files to a folder with Lektor
 ---
 author: 0xc4d4
 ---
 body:
 
-To publish my lektor site I
+### For Github Pages Hosting, some setup needed
+ + get a github pages site by creating a github repository called `<username>.github.io`, I got `0xc4d4.github.io`
+ + clone that on your machine, I assume to `~/web-dev/0xc4d4.github.io`
 
- + got a github pages site by creating a github repository called 0xc4d4.github.io
- + cloned that repository to a new folder on my machine
- + ran `lektor build --output-path ~/web-dev/0xc4d4.github.io` to generate the static site
- + used `git add; git commit -m ' published ' ; git push origin master` to make it go live
- + checked it out at http://0xc4d4.github.io
+### Publish your Lektor CMS website to static HTML etc
+ + `cd <your lektor project folder>`  
+ + `lektor build --output-path ~/web-dev/0xc4d4.github.io` 
+
+### Push your Static output up to GitHub so it's there to be hosted
+ +  `cd ~/web-dev/0xc4d4.github.io`
+ +  `git add; git commit -m ' published ' ; git push origin master` 
+ +  checked it out at `http://<username>.github.io`, e.g. http://0xc4d4.github.io
 
 ---
 pub_date: 2018-02-18
