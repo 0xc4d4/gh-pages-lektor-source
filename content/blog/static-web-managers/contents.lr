@@ -1,0 +1,42 @@
+title: Static Web Managers
+---
+author: 0xc4d4
+---
+body:
+
+Here are some of the static website management systems I considered for this site
+
+Thanks to @Netlify's https://www.staticgen.com/ 
+
+### Lektor
+https://www.getlektor.com 
+Worked on mac & Raspberry Pi
+
+### Tinkerer
+http://tinkerer.me/pages/documentation.html
+* Got an error after install: `Could not import extension tinkerer.ext.blog (exception: No module named compat)`
+	
+### Statik
+https://github.com/thanethomson/statik/wiki/Installation
+* Got an error after install : `No handlers could be found for logger "statik.cmdline"`
+
+### Various
+Didn't review these ones yet
++ http://tarbell.readthedocs.io/en/1.0.5/tutorial.html    interesting, leverages google spreadsheets for content, has interesting map builder backed by google docs for the coords.
++ https://grow.io/start/       has a CMS ??
++ http://hyde.github.io
++ http://www.mkdocs.org                  focused on  documentation generation
++ https://www.getnikola.com
++ https://posativ.org/acrylamid/
++ http://blogofile.com
++ http://urubu.jandecaluwe.com/start.html
++ https://pythonhosted.org/Frozen-Flask/		staticifies a Flask web dev 
++ http://www.sphinx-doc.org/en/master/tutorial.html	focused on  documentation generation
++ http://staticjinja.readthedocs.io/en/latest/
++ https://github.com/kingcons/coleslaw             lisp based
+
+
+---
+pub_date: 2018-02-18
+---
+twitter_handle: 0xc4d4

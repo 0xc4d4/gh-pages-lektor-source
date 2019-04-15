@@ -1,0 +1,18 @@
+title: Lektor Publish
+---
+author: 0xc4d4
+---
+body:
+
+To publish my lektor site I
+
+ + got a github pages site by creating a github repository called 0xc4d4.github.io
+ + cloned that repository to a new folder on my machine
+ + ran `lektor build --output-path ~/web-dev/0xc4d4.github.io` to generate the static site
+ + used `git add; git commit -m ' published ' ; git push origin master` to make it go live
+ + checked it out at http://0xc4d4.github.io
+
+---
+pub_date: 2018-02-18
+---
+twitter_handle: 0xc4d4

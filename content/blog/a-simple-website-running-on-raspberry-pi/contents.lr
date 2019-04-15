@@ -35,7 +35,7 @@ Then I got a few more as the PIP install of Lektor was failing with a reference 
 sudo apt-get install libssl-dev build-essential libffi-dev
 ```
 
-I'd read somewhere that using __virtualenv__ in Python can be a good idea as it supports you to have various versions of packages installed on your system that don't interfere with each other, so now that we had installed the `python-pip` package manager I went and got it and
+I'd read [somewhere][link-ref python virtualenv] that using __virtualenv__ in Python can be a good idea as it supports you to have various versions of packages installed on your system that don't interfere with each other, so now that we had installed the `python-pip` package manager I went and got it and
 + set up a folder for the project
 + created virtual env there & activated
 + grabbed lektor
@@ -66,9 +66,10 @@ And there you go, a python based, CMS interface supported website on Raspberry P
 [link-ref raspbian]: https://www.raspberrypi.org/downloads/raspbian/
 [link-ref raspbian install]: https://www.raspberrypi.org/documentation/installation/installing-images/README.md
 [link-ref raspbian mac terminal]: https://www.raspberrypi.org/documentation/installation/installing-images/mac.md
-[link-ref static web managers]: #todo-blog
-[link-ref blog lektor publish]: #todo-blog
-[link-ref blog pi static web server]: #todo-blog
+[link-ref static web managers]: blog/2018/2/static-web-managers/
+[link-ref python virtualenv]: https://github.com/thanethomson/statik/wiki/Installation
+[link-ref blog lektor publish]: blog/2018/2/lektor-publish/
+[link-ref blog pi static web server]: blog/2018/2/todo/
 ---
 pub_date: 2018-02-18
 ---
